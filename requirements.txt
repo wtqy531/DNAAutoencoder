@@ -1,0 +1,15 @@
+torch==1.10.1+cu113
+torchvision==0.11.2+cu113
+torchaudio==0.10.1+cu113
+numpy==1.26.4
+pandas==2.2.1
+scikit-learn==1.4.0
+matplotlib==3.8.3
+scipy==1.12.0
+tqdm==4.66.2
+biopython==1.84
+openpyxl==3.1.5
+collections==0.0.6
+random==0.0.1
+math==1.2
+requests==2.31.0
