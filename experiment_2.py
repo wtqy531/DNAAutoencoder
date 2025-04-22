@@ -188,7 +188,7 @@ with torch.no_grad():
     print("")
 
     df_p_errs = pd.DataFrame({'Sequence_Index': range(n), 'P_err': p_errs})
-    df_p_errs.to_excel('/data/wuchenyao/workspace/autodna/experiment_2_p_err_values.xlsx', index=False)
+    df_p_errs.to_excel('/data/experiment_2_p_err_values.xlsx', index=False)
 
     print(f"Final MSE Loss: {mse_loss.item():.4f}")
     print(f"Validation Error Rate (P_err) saved to experiment_2_p_err_values.xlsx")
