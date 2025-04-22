@@ -65,7 +65,7 @@ def main():
         "NM_001876",  # CPT1A
     ]
     
-    fasta_file = "/data/wuchenyao/workspace/autodna/S0.fasta"
+    fasta_file = "/data/S0.fasta"
     num_hits = 60  
     D_hits = 200
 
@@ -77,14 +77,14 @@ def main():
 
         result_handle = run_blast(fasta_file)
 
-        similar_sequences_file = f"/data/wuchenyao/workspace/autodna/similar_sequences_{gene_id}.fasta"
+        similar_sequences_file = f"/data/similar_sequences_{gene_id}.fasta"
         sequence_count = parse_blast_results(result_handle, num_hits, D_hits, similar_sequences_file)
 
         if sequence_count >= num_hits:
             print(f"Gene ID {gene_id} successfully yielded {sequence_count} similar sequences.")
             selected_gene_id_list.append(gene_id)
 
-            aligned_output_file = f"/data/wuchenyao/workspace/autodna/aligned_sequences_{gene_id}.aln"
+            aligned_output_file = f"/data/aligned_sequences_{gene_id}.aln"
             multiple_sequence_alignment(similar_sequences_file, aligned_output_file)
         else:
             print(f"Gene ID {gene_id} did not yield enough similar sequences. Trying next gene ID...")
