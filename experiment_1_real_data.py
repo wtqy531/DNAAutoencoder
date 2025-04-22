@@ -141,16 +141,16 @@ D = 200
 k = 4
     
 alignment_files = [
-    "/data/wuchenyao/workspace/autodna/aligned_sequences_NM_000314.aln",
-    "/data/wuchenyao/workspace/autodna/aligned_sequences_NM_000457.aln",
-    "/data/wuchenyao/workspace/autodna/aligned_sequences_NM_000572.aln",
-    "/data/wuchenyao/workspace/autodna/aligned_sequences_NM_000594.aln",
-    "/data/wuchenyao/workspace/autodna/aligned_sequences_NM_001876.aln",
-    "/data/wuchenyao/workspace/autodna/aligned_sequences_NM_002524.aln",
-    "/data/wuchenyao/workspace/autodna/aligned_sequences_NM_004333.aln",
-    "/data/wuchenyao/workspace/autodna/aligned_sequences_NM_005522.aln",
-    "/data/wuchenyao/workspace/autodna/aligned_sequences_NM_005910.aln",
-    "/data/wuchenyao/workspace/autodna/aligned_sequences_NM_033360.aln"
+    "/data/aligned_sequences_NM_000314.aln",
+    "/data/aligned_sequences_NM_000457.aln",
+    "/data/aligned_sequences_NM_000572.aln",
+    "/data/aligned_sequences_NM_000594.aln",
+    "/data/aligned_sequences_NM_001876.aln",
+    "/data/aligned_sequences_NM_002524.aln",
+    "/data/aligned_sequences_NM_004333.aln",
+    "/data/aligned_sequences_NM_005522.aln",
+    "/data/aligned_sequences_NM_005910.aln",
+    "/data/aligned_sequences_NM_033360.aln"
 ]
 
 results = []
@@ -199,4 +199,4 @@ for alignment_file in alignment_files:
             print(kmer_probabilities)
         
 results_df = pd.DataFrame(results, columns=['Perr_limit', 'Max_Alpha', 'Max_p_err', 'Average_p_err', 'n', 'Ave_alpha', 'alignment_file'])
-results_df.to_excel('/data/wuchenyao/workspace/alignment_results.xlsx', index=False)
+results_df.to_excel('/data/alignment_results.xlsx', index=False)
